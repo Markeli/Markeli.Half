@@ -5,7 +5,8 @@
 ##########################################################################
 
 # Define directories.
-SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+SCRIPT_DIR=$( pwd )
+echo "Script dir is $SCRIPT_DIR"
 TOOLS_DIR=$SCRIPT_DIR/tools
 TOOLS_PROJ=$TOOLS_DIR/tools.csproj
 DEFAULT_CAKE_VERSION=0.30.0
