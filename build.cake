@@ -87,7 +87,7 @@ Task("Publish")
 {
    var settings = new DotNetCoreNuGetPushSettings
     {
-        Source = "https://api.nuget.org/v3/",
+        Source = "https://api.nuget.org/v3/index.json",
         ApiKey = EnvironmentVariable("Nuget_API_KEY")
     };
    Information(isMasterBranch);
