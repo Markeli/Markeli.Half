@@ -33,6 +33,7 @@ if($WhatIf.IsPresent) {
 Remove-Item -Recurse -Force "$TEMP_DIR"
 $CakePath = Get-ChildItem -Filter Cake.dll -Recurse | Sort-Object -Descending | Select-Object -Expand FullName -first 1
 
+Write-Host "$ScriptArgs"
 Write-Host "Running build script..."
 & dotnet "$CakePath" $Script --nuget_useinprocessclient=true --target=$Target --configuration=$Configuration --verbosity=$Verbosity $UseDryRun $ScriptArgs
 exit $LASTEXITCODE

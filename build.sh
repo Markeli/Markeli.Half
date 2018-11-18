@@ -60,7 +60,8 @@ for i in "$@"; do
         -c|--configuration) CONFIGURATION="$2"; shift ;;
         -v|--verbosity) VERBOSITY="$2"; shift ;;
         -d|--dryrun) DRYRUN="-dryrun" ;;
-        --) shift; SCRIPT_ARGUMENTS+=("$@"); break ;;
+        -k) SCRIPT_ARGUMENTS+=("$2") shift;;
+        --) SCRIPT_ARGUMENTS+=("$@"); break ;;
         *) SCRIPT_ARGUMENTS+=("$1") ;;
     esac
     shift

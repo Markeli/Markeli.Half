@@ -4,6 +4,7 @@
 
 var target = Argument<string>("target", "Default");
 var configuration = Argument<string>("configuration", "Release");
+var nugetApiKey = Argument("-k", "");
 
 //////////////////////////////////////////////////////////////////////
 // EXTERNAL NUGET TOOLS
@@ -12,17 +13,17 @@ var configuration = Argument<string>("configuration", "Release");
 #Tool "xunit.runner.console"
 
 var artifactsDir = Directory("./artifacts");
-var testResultsDir = artifactsDir + Directory("test-results");
-var publishDir = artifactsDir + Directory("publish");
 var solutionPath = "./System.Half.sln";
 var framework = "netstandard2.0";
+
+var isMasterBranch = StringComparer.OrdinalIgnoreCase.Equals("master",
+    BuildSystem.TravisCI.Environment.Build.Branch);
 
 Task("Clean")
     .Does(() => 
     {            
         DotNetCoreClean(solutionPath);        
         DirectoryPath[] cleanDirectories = new DirectoryPath[] {
-            testResultsDir,
             artifactsDir
         };
     
@@ -66,8 +67,36 @@ Task("UnitTests")
         }
     });
      
+Task("Pack")
+    .IsDependentOn("UnitTests")
+    .Does(() =>
+    {        
+         Information("Packing to nupkg...");
+         var settings = new DotNetCorePackSettings
+          {
+              Configuration = configuration,
+              OutputDirectory = artifactsDir
+          };
+         
+          DotNetCorePack(solutionPath, settings);
+    });
+    
+Task("Publish")
+.IsDependentOn("Pack")
+.WithCriteria(() => BuildSystem.TravisCI.IsRunningOnTravisCI && isMasterBranch)
+.Does(()=> 
+{
+   var settings = new DotNetCoreNuGetPushSettings
+    {
+        Source = "https://api.nuget.org/v3/",
+        ApiKey = EnvironmentVariable("Nuget_API_KEY")
+    };
+   Information(isMasterBranch);
+   DotNetCoreNuGetPush("./artifacts/*nupkg", settings);
+    
+});
  
 Task("Default")
-    .IsDependentOn("Build");
+    .IsDependentOn("Publish");
     
 RunTarget(target);
