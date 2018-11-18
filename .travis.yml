@@ -5,7 +5,4 @@ mono: none
 dotnet: 2.1
 sudo: required
 script:
-- ./temp.sh
-- pwd
-- ls -al
-- echo 'done'
+- ./build.sh
