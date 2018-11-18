@@ -22,7 +22,7 @@
         <AssemblyName>Markeli.Half</AssemblyName>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <PackageId>Markeli.Half</PackageId>
-        <PackageVersion>1.0.0</PackageVersion>
+        <PackageVersion>1.0.1</PackageVersion>
         <Authors>Markeli</Authors>
         <Owners>Markeli</Owners>
         <Title>Implementation of a half-precision floating point number in .net standard</Title>

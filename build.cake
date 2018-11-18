@@ -88,7 +88,8 @@ Task("Publish")
    var settings = new DotNetCoreNuGetPushSettings
     {
         Source = "https://api.nuget.org/v3/index.json",
-        ApiKey = EnvironmentVariable("Nuget_API_KEY")
+        ApiKey = EnvironmentVariable("Nuget_API_KEY"),
+        IgnoreSymbols = true
     };
    Information(isMasterBranch);
    DotNetCoreNuGetPush("./artifacts/Markeli.Half*.nupkg", settings);
