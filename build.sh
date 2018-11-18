@@ -4,8 +4,6 @@
 # Custom bootstrapper for Cake on Linux with .NET Core 2.0
 ##########################################################################
 
-echo "start"
-
 # Define directories.
 SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 echo "Script dir is $SCRIPT_DIR"
