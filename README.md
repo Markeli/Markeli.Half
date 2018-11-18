@@ -1,7 +1,12 @@
 # System.Half
 Implementation of a half-precision floating point number in .net standard
 
-[![Build Status](https://travis-ci.org/Markeli/System.Half.svg?branch=master)](https://travis-ci.org/Markeli/System.Half)
+|    	|       master     	|  develop 	|
+|----------	|:-------------:	|:-------------:|
+| build 	|  [![Build Status](https://travis-ci.org/Markeli/System.Half.svg?branch=master)](https://travis-ci.org/Markeli/System.Half) | [![Build Status](https://travis-ci.org/Markeli/System.Half.svg?branch=develop)](https://travis-ci.org/Markeli/System.Half)|
+| nuget 	|  N/A  |   N/A 	|
+
+
 
 Half is not fast enough and precision is also very bad, so is should not be used for mathematical computation (use `Single` instead). The main advantage of Half type is lower memory cost: two bytes per number. Half is typically used in graphical applications.
 
