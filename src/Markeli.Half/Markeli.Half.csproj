@@ -21,7 +21,7 @@
         <TargetFrameworks>netstandard2.0</TargetFrameworks>
         <AssemblyName>Markeli.Half</AssemblyName>
         <AssemblyVersion>1.0.0</AssemblyVersion>
-        <PackageId>System.Half</PackageId>
+        <PackageId>Markeli.Half</PackageId>
         <PackageVersion>1.0.0</PackageVersion>
         <Authors>Markeli</Authors>
         <Owners>Markeli</Owners>
