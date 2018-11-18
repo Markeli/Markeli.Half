@@ -4,7 +4,6 @@
 
 var target = Argument<string>("target", "Default");
 var configuration = Argument<string>("configuration", "Release");
-var nugetApiKey = Argument("-k", "");
 
 //////////////////////////////////////////////////////////////////////
 // EXTERNAL NUGET TOOLS
