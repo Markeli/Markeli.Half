@@ -7,7 +7,7 @@
 echo "start"
 
 # Define directories.
-SCRIPT_DIR=$( pwd )
+SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 echo "Script dir is $SCRIPT_DIR"
 TOOLS_DIR=$SCRIPT_DIR/tools
 TOOLS_PROJ=$TOOLS_DIR/tools.csproj
