@@ -91,7 +91,7 @@ Task("Publish")
         ApiKey = EnvironmentVariable("Nuget_API_KEY")
     };
    Information(isMasterBranch);
-   DotNetCoreNuGetPush("./artifacts/*nupkg", settings);
+   DotNetCoreNuGetPush("./artifacts/Markeli.Half*.nupkg", settings);
     
 });
  
