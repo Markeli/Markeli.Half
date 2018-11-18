@@ -8,4 +8,4 @@ script:
 - ./temp.sh
 - pwd
 - ls -al
-- ./build.sh
+- echo 'done'
