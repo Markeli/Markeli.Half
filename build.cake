@@ -68,6 +68,7 @@ Task("UnitTests")
      
 Task("Pack")
     .IsDependentOn("UnitTests")
+    .WithCriteria(() => BuildSystem.TravisCI.IsRunningOnTravisCI && isMasterBranch)
     .Does(() =>
     {        
          Information("Packing to nupkg...");
@@ -79,24 +80,8 @@ Task("Pack")
          
           DotNetCorePack(solutionPath, settings);
     });
-    
-Task("Publish")
-.IsDependentOn("Pack")
-.WithCriteria(() => BuildSystem.TravisCI.IsRunningOnTravisCI && isMasterBranch)
-.Does(()=> 
-{
-   var settings = new DotNetCoreNuGetPushSettings
-    {
-        Source = "https://api.nuget.org/v3/index.json",
-        ApiKey = EnvironmentVariable("Nuget_API_KEY"),
-        IgnoreSymbols = true
-    };
-   Information(isMasterBranch);
-   DotNetCoreNuGetPush("./artifacts/Markeli.Half*.nupkg", settings);
-    
-});
- 
+     
 Task("Default")
-    .IsDependentOn("Publish");
+    .IsDependentOn("Pack");
     
 RunTarget(target);
