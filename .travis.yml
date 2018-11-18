@@ -3,5 +3,7 @@ mono: none
 dotnet: 2.1
 sudo: required
 script:
+- pwd
+- ls
 - chmod +x build.sh
 - ./build.sh
