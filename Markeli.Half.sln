@@ -2,11 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8F4A5472-F772-4151-965D-B9439F912A49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Half", "src\System.Half\System.Half.csproj", "{E661AB47-3F6A-4606-8A1E-429FE2080A90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markeli.Half", "src\Markeli.Half\Markeli.Half.csproj", "{E661AB47-3F6A-4606-8A1E-429FE2080A90}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D7118A65-D805-4490-AD3A-5979C0C4AF72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Half.UnitTests", "tests\System.Half.UnitTests\System.Half.UnitTests.csproj", "{8B16C45D-091A-4A57-8AF4-5A01E45DCB08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markeli.Half.UnitTests", "tests\Markeli.Half.UnitTests\Markeli.Half.UnitTests.csproj", "{8B16C45D-091A-4A57-8AF4-5A01E45DCB08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,10 +1,10 @@
-# System.Half
+# Markeli.Half
 Implementation of a half-precision floating point number in .net standard
 
 |    	|       master     	|  develop 	|
 |----------	|:-------------:	|:-------------:|
-| build 	|  [![Build Status](https://travis-ci.org/Markeli/System.Half.svg?branch=master)](https://travis-ci.org/Markeli/System.Half) | [![Build Status](https://travis-ci.org/Markeli/System.Half.svg?branch=develop)](https://travis-ci.org/Markeli/System.Half)|
-| nuget 	|  N/A  |   N/A 	|
+| build 	|  [![Build Status](https://travis-ci.org/Markeli/Markeli.Half.svg?branch=master)](https://travis-ci.org/Markeli/Markeli.Half) | [![Build Status](https://travis-ci.org/Markeli/Markeli.Half.svg?branch=develop)](https://travis-ci.org/Markeli/Markeli.Half)|
+| nuget 	|  ![NuGet](https://img.shields.io/nuget/v/Markeli.Half.svg?style=plastic)  |   N/A 	|
 
 
 

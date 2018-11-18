@@ -12,7 +12,7 @@ var configuration = Argument<string>("configuration", "Release");
 #Tool "xunit.runner.console"
 
 var artifactsDir = Directory("./artifacts");
-var solutionPath = "./System.Half.sln";
+var solutionPath = "./Markeli.Half.sln";
 var framework = "netstandard2.0";
 
 var isMasterBranch = StringComparer.OrdinalIgnoreCase.Equals("master",

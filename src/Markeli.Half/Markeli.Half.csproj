@@ -12,14 +12,14 @@
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-      <DocumentationFile>bin\Release\netstandard2.0\System.Half.xml</DocumentationFile>
+      <DocumentationFile>bin\Release\netstandard2.0\Markeli.Half.xml</DocumentationFile>
     </PropertyGroup>
 
     <!-- Nuget config -->
     <PropertyGroup>
         <!-- This project will output netstandard2.0 and net461 assemblies -->
         <TargetFrameworks>netstandard2.0</TargetFrameworks>
-        <AssemblyName>System.Half</AssemblyName>
+        <AssemblyName>Markeli.Half</AssemblyName>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <PackageId>System.Half</PackageId>
         <PackageVersion>1.0.0</PackageVersion>
@@ -27,14 +27,14 @@
         <Owners>Markeli</Owners>
         <Title>Implementation of a half-precision floating point number in .net standard</Title>
         <Description>Half is not fast enough and precision is also very bad, so is should not be used for mathematical computation (use `Single` instead). The main advantage of Half type is lower memory cost: two bytes per number. Half is typically used in graphical applications.</Description>
-        <PackageLicenseUrl>https://github.com/Markeli/System.Half/blob/master/LICENSE</PackageLicenseUrl>
-        <PackageProjectUrl>https://github.com/Markeli/System.Half/blob/master/README.md</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Markeli/Markeli.Half/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/Markeli/Markeli.Half/blob/master/README.md</PackageProjectUrl>
         <RepositoryType>github</RepositoryType>
-        <RepositoryUrl>https://github.com/Markeli/System.Half</RepositoryUrl>
+        <RepositoryUrl>https://github.com/Markeli/Markeli.Half</RepositoryUrl>
         <PackageTags>half-precision floating-point .netstandard </PackageTags>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <PackageReleaseNotes>Fully tested half-precision floating point number. 
-        More details on https://github.com/Markeli/System.Half/blob/master/CHANGELOG.md</PackageReleaseNotes>
+        More details on https://github.com/Markeli/Markeli.Half/blob/master/CHANGELOG.md</PackageReleaseNotes>
         
     </PropertyGroup>
     

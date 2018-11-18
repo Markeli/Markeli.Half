@@ -7,7 +7,9 @@
 
         <LangVersion>7.3</LangVersion>
 
-        <RootNamespace>System.UnitTests</RootNamespace>
+        <RootNamespace>Markeli.UnitTests</RootNamespace>
+
+        <AssemblyName>Markeli.Half.UnitTests</AssemblyName>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -16,7 +18,7 @@
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-      <DocumentationFile>bin\Release\netstandard2.0\System.Half.xml</DocumentationFile>
+      <DocumentationFile>bin\Release\netstandard2.0\Markeli.Half.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -26,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\System.Half\System.Half.csproj" />
+      <ProjectReference Include="..\..\src\Markeli.Half\Markeli.Half.csproj" />
     </ItemGroup>
 
 </Project>
